@@ -175,7 +175,7 @@ Función enviarLogin():
 -pass: contraseña ingresada por el usuario.
 La respuesta será "false" si no se encuentra coincidencia en la base de datos y en caso contrario, la respuesta será un código de sesión de 9 dígitos.
 
-![Imagen Login](/FrontCaht/FrontEnd/Imagenes/captura_login.jpg)
+![Imagen Login](/FrontChat/FrontEnd/Imagenes/captura_login.jpg)
 
 #### Página: Registro
 **HTML:**
