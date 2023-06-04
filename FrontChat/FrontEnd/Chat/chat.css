@@ -1,0 +1,231 @@
+/*imports de fuentes de "google fonts"*/
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vibur:400');
+
+* {
+    box-sizing: border-box;
+}
+/*estilos para trabajar con gridview*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo 2', sans-serif;
+    background-color: grey;
+}
+
+#cabecera {
+    display: flex;
+    flex-direction: row;
+    height: 7em;
+    background-image: url("../Imagenes/wall.png");
+    background-color: rgb(29, 29, 29);
+}
+
+h4 {
+    color: orange;
+}
+#añadirAmigo {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#nuevoAmigo {
+    padding: .5em;
+    border-radius: 4px;
+    border: none;
+    width: 60%;
+    margin-left: 1em;
+}
+
+/*el text-shadow y la animación "pulsate" hacen que el nombre de usuario parezca un neon que parpadea levemente*/
+#nombreUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: lighter;
+    font-family: "Vibur", sans-serif;
+    letter-spacing: .2em;
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px orange,
+        0 0 82px orange,
+        0 0 92px orange,
+        0 0 102px orange,
+        0 0 151px orange;
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+@keyframes pulsate {
+    
+    100% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px orange,
+        0 0 80px orange,
+        0 0 90px orange,
+        0 0 100px orange,
+        0 0 150px orange;
+    
+    }
+    
+    0% {
+        text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px orange,
+        0 0 73px orange,
+        0 0 80px orange,
+        0 0 94px orange,
+        0 0 140px orange;
+    }
+}
+
+#nuevoChat {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-top: 1em;
+}
+
+#listaAmigos {
+    padding: .5em;
+    border-radius: 4px;
+    width: 70%;
+    margin-left: 1em;
+}
+
+#cerrarSesion img{
+    position: relative;
+    top: 1.8em;
+    left: 2.5em;
+    cursor: pointer;
+}
+
+.add {
+    cursor: pointer;
+    font-size: 1.2em;
+    border-radius: 100em;
+    background-color: orange;
+    padding: .2em .5em .2em .5em;
+    border: none;
+}
+.add:active {
+    transform: scale(.95, .95);
+}
+
+/*Media queries para que no se descuadre la cabecera cuando se reduce la pantalla a la mitad*/
+@media only screen and (max-width: 1000px) {
+    #nombreUser {
+        width: 35%;
+    }
+}
+
+.botonesChat {
+    display: flex;
+    flex-direction: row;
+    height: 3em;
+}
+
+.conversacion {
+    display: flex;
+    width: 20%;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid blueviolet;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: black;
+}
+
+.mensajes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 520px;
+    font-size: 1.1em;
+    overflow: auto;
+}
+.escribir {
+    margin-top: -.8em;
+    width: 90%;
+    margin-left: 10%;
+}
+#sms {
+    width: 80%;
+    padding: .6em;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+#botónEnviar {
+    position: relative;
+    top: 1em;
+    cursor: pointer;
+    background-color: white;
+    padding: .1em;
+    border-radius: 5px;
+}
+
+#botónEnviar:hover {
+    background-color: green;
+}
+
+#botónEnviar:active {
+    transform: scale(.95, .95);
+}
+
+.mensajeEntrante {
+    display: flex;
+    justify-content: flex-start;
+}
+.mensajeEntrante p {
+    background-color: blueviolet;
+    border-radius: 5px;
+    padding: .5em;
+    color: white;
+    word-wrap: break-word;
+    max-width: 70%;
+}
+
+.mensajeSaliente {
+    display: flex;
+    justify-content: flex-end;
+}
+.mensajeSaliente p {
+    max-width: 70%;
+    border-radius: 5px;
+    background-color: orange;
+    padding: .5em;
+    word-wrap: break-word;
+}

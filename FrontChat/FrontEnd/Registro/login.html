@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg_log.css">
+    <script src="reg_log.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="contenido">
+        <div class="login">
+                <h1>LOGIN</h1>
+                <form id="formulario" onsubmit="enviarLogin(event)">
+                    <input type="text" name="mail" id="mail" placeholder="CORREO" required>
+                    <input type="password" name="pass" id="pass" placeholder="CONTRASEÑA" required>
+                    <div id="respuesta"></div>
+                    <input type="submit" name="enviar" id="enviar" value="INICIAR SESIÓN">
+                    <p id="crear">¿NO TIENES CUENTA? <a href="../Registro/registro.html" target="_self">REGÍSTRATE</a></p>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

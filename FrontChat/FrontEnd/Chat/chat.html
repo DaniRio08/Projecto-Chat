@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    <script src="chat.js"></script>
+    <title>Chat</title>
+</head>
+<body onload="getAmigos(), recibirMensaje(), getUser()">
+    <div id="cabecera" class="col-12">
+
+        <div id="añadirAmigo" class="col-3">
+            <div style="margin: -1.5em 0 0 1em;"><h4>AÑADIR AMIGO</h4></div>
+            <div id="contentA" style="margin-top: -1em;">
+                <input type="text" name="nuevoAmigo" id="nuevoAmigo" placeholder="email@nuevoamigo">
+                <button onclick="añadirAmigo()" class="add">+</button>
+            </div>
+            <div id="respuestaA" style="margin: .2em 0 -.2em 1em;"></div>
+        </div>
+
+        <div id="nombreUser" class="col-5">
+            <div id="user"></div>
+        </div>
+
+        <div id="nuevoChat" class="col-3">
+            <div style="margin: -1.5em 0 0 1em;"><h4>NUEVA CONVERSACIÓN</h4></div>
+            <div id="contentB" style="margin-top: -1em;">
+                <select name="listaAmigos" id="listaAmigos">
+                    <option selected disabled>AMIGO</option>
+                </select>
+                <button onclick="nuevaConversacion()" class="add">+</button>
+                <div id="respuestaB" style="margin: .2em 0 -.2em 1em;"></div>
+            </div>
+        </div>
+
+        <div id="cerrarSesion">
+            <img src="../Imagenes/logout.png" alt="logout" title="Cerrar Sesión" onclick="LogOut()" id="logout"
+            onmouseover="cambiarImagenLogout(true)", onmouseout="cambiarImagenLogout(false)">
+        </div>
+
+    </div>
+
+    <div class="botonesChat">
+
+    </div>
+
+    <div class="chat">
+
+        <div class="mensajes">
+        </div>
+
+        <div class="escribir">
+            <input type="text" name="sms" id="sms" placeholder="Escribe aquí tu mensaje..." onkeyup="checkEnter(event)">
+            <img src="../Imagenes/enviar.png" alt="botón enviar" title="Enviar" id="botónEnviar" onclick="enviarMensaje()"
+            onmouseover="cambiarImagenEnviar(true)", onmouseout="cambiarImagenEnviar(false)">
+        </div>
+
+    </div>
+</body>
+</html>

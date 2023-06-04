@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg_log.css">
+    <script src="reg_log.js"></script>
+    <title>Registro</title>
+</head>
+<body onload="getPaises()">
+    <div class="contenido">
+        <div class="registro">
+                <h1>REGÍSTRATE</h1>
+                <form id="formulario" onsubmit="enviarRegistre(event)">
+                    <input type="text" name="user" id="user" placeholder="USUARIO" required>
+                    <input type="text" name="mail" id="mail" placeholder="CORREO" required>
+                    <select name="pais" id="pais" required>
+                        <option selected disabled>PAÍS</option>
+
+                    </select>
+                    <input type="password" name="pass" id="pass" placeholder="CONTRASEÑA" required>
+                    <input type="password" name="rpass" id="rpass" placeholder="REPITE LA CONTRASEÑA" oninput="comprobarContraseña()" required>
+                    <div id="respuesta"></div>
+                    <input type="submit" name="enviar" id="enviar" value="CREAR CUENTA">
+                    <p id="ini">¿YA TIENES UNA CUENTA? <a href="../Registro/login.html" target="_self">INICIAR SESIÓN</a></p>
+                </form>
+        </div>
+    </div>
+</body>
+</html>

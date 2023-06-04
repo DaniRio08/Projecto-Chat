@@ -1,0 +1,94 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*box shadow para añadir un borde con efecto neon*/
+.registro, .login {
+    margin-top: 5%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 2em;
+    border-radius: 10px;
+    border: 0.2rem solid #fff;
+    box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem orangered,
+            0 0 0.8rem orangered,
+            0 0 2.8rem orangered,
+            inset 0 0 1.3rem orangered;
+}
+
+input, select {
+    padding: .6em;
+    margin: .3em 0 1em 0;
+    width: 95%;
+    border-radius: 10px;
+    font-size: 1.1em;
+    border: 1px solid black;
+    outline: none;
+}
+select {
+    width: 100%;
+}
+input[type=submit] {
+    color: white;
+    font-size: 1.1em;
+    background-color: orangered;
+    border-radius: 10px;
+    padding: .7em;
+    margin: 1em 0 0.5em 0;
+    border: none;
+    box-shadow: 5px 5px 7px rgb(2, 0, 6);
+}
+input:focus, select:focus {
+    border: 1px solid orange;
+}
+input[type=submit]:focus {
+    border: none;
+}
+input[type=submit] {
+    width: 100%;
+}
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+input[type=submit]:active {
+    transform: scale(0.95, 0.95);
+    box-shadow: none;
+}
+#crear, #ini {
+    color: grey;
+    font-size: .8em;
+    font-weight: bold;
+}
+#crear a, #ini a {
+    color: orangered;
+    text-decoration: none;
+}
+#crear a:hover, #ini a:hover {
+    color: orange;
+}
+
+/*media query para mantener los formularios de un tamaño legible cuando se reduce la pantalla a la mitad*/
+@media only screen and (max-width: 1000px) {
+    .login {
+        width: 40%;
+    }
+
+    .registro {
+        width: 50%;
+    }
+}
